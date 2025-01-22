@@ -1,0 +1,63 @@
+Data Types Overview
+Data types are classifications that specify the type of data that a variable can hold. They are essential in programming as they define the operations that can be performed on the data and the structure in which the data can be stored.
+
+Primitive Data Types
+Primitive data types are the most basic types of data that are built into a programming language. They typically represent single values and are predefined by the language.
+
+Examples of Primitive Data Types:
+Integer (int): Represents whole numbers.
+Example: int age = 25;
+Floating Point (float, double): Represents numbers with decimal points.
+Example: float price = 19.99;
+double provides more precision compared to float.
+Character (char): Represents a single character.
+Example: char grade = 'A';
+Boolean (bool): Represents true or false values.
+Example: bool isPassed = true;
+String (string) (in some languages considered non-primitive): Represents a sequence of characters.
+Example: string name = "John";
+Non-Primitive Data Types
+Non-primitive data types, also known as reference types or complex types, are more complex. They are not predefined by the language and are often built using primitive types. These types can store multiple values or more complex objects.
+
+Examples of Non-Primitive Data Types:
+Arrays: A collection of elements, all of the same type.
+
+Example: int[] numbers = {1, 2, 3, 4, 5};
+Classes: Define complex data structures that include fields (variables) and methods (functions).
+
+Example:
+java
+Copy code
+class Person {
+    String name;
+    int age;
+}
+java
+Copy code
+Person p1 = new Person();
+p1.name = "Alice";
+p1.age = 30;
+Interfaces: Define a contract that classes can implement.
+
+Example:
+java
+Copy code
+interface Animal {
+    void sound();
+}
+Enumerations (enum): A special data type that defines a set of named constants.
+
+Example:
+java
+Copy code
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY
+}
+Collections: Classes like List, Set, Map that can hold multiple objects and provide various operations to manipulate them.
+
+Example in Java: List<String> list = new ArrayList<>();
+Key Differences Between Primitive and Non-Primitive Data Types:
+Memory Allocation: Primitive types are stored in a stack, whereas non-primitive types are stored in a heap.
+Complexity: Primitive types are simpler and only hold a single value, while non-primitive types can store multiple values and have additional functionalities.
+Flexibility: Non-primitive types can be extended and customized, while primitive types are fixed.
+Understanding these data types is crucial for efficient coding and proper memory management in any programming language.
