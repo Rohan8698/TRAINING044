@@ -27,35 +27,61 @@
 // });
 // console.log(p3);
 
-function fetchUsers(){
-    let res = window.fetch("https://jsonplaceholder.typicode.com/users")
-    // console.log(res)
-    .then((res)=>{
-        // console.log(res)
-        // console.log(res.json())
-        return res.json().then(data=>{
-            // console.log(data)
-            let store = document.getElementById("store")
-            data.map((user)=>{
-                // console.log(user)
-                store.innerHTML +=
-                `
-                <tr>
-                <td>${user.id}</td>
-                <td>${user.name}</td>
-                <td>${user.email}</td>
-                <td>${user.company}</td>
-                </tr>
-                `
-            })
+// function fetchUsers(){
+//     let res = window.fetch("https://jsonplaceholder.typicode.com/users")
+//     // console.log(res)
+//     .then((res)=>{
+//         // console.log(res)
+//         // console.log(res.json())
+//         return res.json().then(data=>{
+//             // console.log(data)
+//             let store = document.getElementById("store")
+//             data.map((user)=>{
+//                 // console.log(user)
+//                 store.innerHTML +=
+//                 `
+//                 <tr>
+//                 <td>${user.id}</td>
+//                 <td>${user.name}</td>
+//                 <td>${user.email}</td>
+//                 <td>${user.company}</td>
+//                 </tr>
+//                 `
+//             })
 
-        })
-    })
-    .catch(err=>console.log(err))
+//         })
+//     })
+//     .catch(err=>console.log(err))
     
-}
-fetchUsers()
+// }
+// fetchUsers()
 
+
+// let P = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         resolve("Promise successfully completing");
+//     })
+// })
+
+// async function demo()
+// {
+//     console.log("Start");
+//     let x =await P;
+//     console.log(x);
+
+//     console.log("End");
+    
+// }
+// demo();
+
+
+
+async function fetchUsers(){
+    let response =await fetch("https://jsonplaceholder.typicode.com/users");
+    let data =await response.json();
+    console.log(data);
+}
+fetchUsers();
 
 
 
