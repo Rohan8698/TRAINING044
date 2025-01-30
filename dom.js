@@ -1,147 +1,101 @@
 // !document.getElementById("");
 
 // let element = document.getElementById("demo");
-// element.innerTExt = "DOM";
+// element.innerText = "DOM";
 // console.log(element);
 
 // let div = document.getElementById("test");
+// // div.innerText = "<h1>Header</h1>"
 // div.innerHTML = "<h1>Header</h1>"
 // console.log(div);
+
+// ! document.getElementsByClassName
 // let ele = document.getElementsByClassName("test");
-// console.log(ele);
-// console.log(Array.isArray(ele));
-// ele[0].computedStyleMap.backgroundcolor="yellow"
+// // console.log(ele);
+// // console.log(Array.isArray(ele));
+// ele[0].style.backgroundColor="yellow"
+// // ! spread operator :- it is used to takeout each and every value from the original array and store it in one more new Array(pure array).
+// //! synatx :-   [...variable]
 // let x = [...ele];
-// console.log(x , Array.isArray(x));
+// console.log(x  , Array.isArray(x));
 // x.map((element)=>{
-//     element.computedStyleMap.backgroundxolor="teal";
+//     // console.log(element);
+//     element.style.backgroundColor="teal";
 // })
 
+// ! document.getElementsByTagName()
 
-// let ele = document.getElementsByClassName("div");
+// let ele = document.getElementsByTagName("div");
+// console.log(ele);
+
+// ! document.getElementsByName()
+
+let ele = document.getElementsByName("username");
+console.log(ele);
+[...ele].map(element=>{
+    console.log(element.value);
+    // element.style.backgroundColor="aqua"
+})
+
+//!
+
+// let ele = document.querySelector("#demo");
+// console.log(ele);
+
+// let ele = document.querySelector(".test");
 // console.log(ele);
 
 
-
-
-
-
-
-
-
-
-// let ele = document.querySelector(".test");
-// console.log(ele); 
-
-// let ele = document.querySelectorAll(".test");
-// // console.log(ele); 
+// let ele=  document.querySelectorAll(".test");
+// // console.log(ele);
 // [...ele].map(element=>{
-//     console.log(element.innertext);
-// }) 
+//     console.log(element.innerText);
+// })
 
-
-
-
-
-
-
-
-
-
+// ! events
 // let btn = document.getElementById("btn");
+// // btn.addEventListener("events" , callbackfn)
 // btn.addEventListener("click",()=>{
 //     console.log("button clicked");
+//     document.body.style.background="dodgerblue"
+// })
+
+// let btn = document.getElementById("btn");
+// btn.addEventListener("dblclick",()=>{
+//     console.log("button is clicked 2 times");
+// })
+
+// let btn = document.getElementById("btn");
+// btn.addEventListener("mouseover" , ()=>{
+//     // alert("mouse over done")
 //     document.body.style.background="teal"
 // })
 
+// btn.addEventListener("mouseleave" , ()=>{
+//     // alert("mouse leave done")
+//     document.body.style.background="tomato"
+// })
 
 
+// let inp = document.querySelector("#inp");
+// inp.addEventListener("keydown",()=>{
+//     console.log("key down");
+// })
+
+// inp.addEventListener("keyup",()=>{
+//     console.log("key up");
+// })
 
 
-
-
-
+//!
 // let bgColor = document.querySelectorAll(".bgColor");
-// [...bgColor].map((element) => {
-//   element.addEventListener("mouseover", () => {
-//     console.log(element.innerText);
-//     element.style.backgroundColor = element.innerText;
-//   });
+// [...bgColor].map((element)=>{
+//     element.addEventListener("mouseover",()=>{
+//         // console.log(element.innerText);
+//         element.style.backgroundColor=element.innerText;
+//     });
 
-//   element.addEventListener("mouseleave", () => {
-//     element.style.backgroundColor = "transparent";
-//   })
-// });
-
-
-
-
-
-
-
-
-// let x = document.createElement("h1");
-// x.innerText = "Dynamic creation of html element from JS";
-// x.setAttribute("id", "demo");
-// console.log(x);
-
-// document.body.appendChild(x);
-
-// let image = document.createElement("img");
-// image.src = "./3606208.jpg";
-// console.log(image);
-
-// document.body.appendChild(image);
-
-
-// let mainEle = document.createElement("div");
-// mainEle.setAttribute("class","mainBlock");
-// console.log(mainEle);
-
-// let topEle = document.createElement("div");
-// topEle.setAttribute("class" , "topBlock");
-// console.log(topEle);
-
-// let image = document.createElement("img");
-// image.src="https://cdn.pixabay.com/photo/2025/01/14/13/55/nature-9332892_640.jpg";
-// image.width="300"
-// image.height="300"
-
-// let bottomEle = document.createElement("div");
-// bottomEle.setAttribute("class","bottomBlock");
-// let h1 = document.createElement("h1");
-// h1.innerText="view More";
-
-// bottomEle.appendChild(h1);
-// topEle.appendChild(image);
-// mainEle.appendChild(topEle);
-// mainEle.appendChild(bottomEle);
-// document.body.appendChild(mainEle);
-
-
-let password  = document.getElementNyId("uPass");
-let check = document.getElementById("check");
-let show= doucument.getElementById("show");
-
-let gen = document.getElementsByName("gender");
-
-
-check>addEventListener("click" ,event=>{
-    if(event.target.checked === true){
-        password.setAttribute("type", "text");
-        show.innerText = "hide password";
-    }else{
-        password.setAttribute("type" , "password");
-    }
-
-})
-
-FormData.addEventListener("submit" , event=>{
-    event.preventDefault();
-    let un = username.value;
-    
-})
-
-
-
-
+//     element.addEventListener("mouseleave",()=>{
+//         element.style.backgroundColor="transparent";
+//     })
+// })

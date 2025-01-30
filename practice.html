@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2" cellpadding="8px" cellspacing="0px">
+        <thead>
+            <tr>
+                <th>sl.no</th>
+                <th>name</th>
+                <th>company</th>
+                <th>salary</th>
+                <th>city</th>
+                <th>area</th>
+            </tr>
+        </thead>
+        <tbody id="store">
+
+        </tbody>
+    </table>
+
+    <script>
+        let employees =[
+            {
+                empId:1,
+                empName:"Kamal",
+                empCompany:"Google",
+                empSal:123456,
+                empAddress:{
+                    empCity:"Hyd",
+                    area:"Ramnagar"
+                }
+            },
+            {
+                empId:2,
+                empName:"Shravan",
+                empCompany:"Facebook",
+                empSal:223456,
+                empAddress:{
+                    empCity:"Hyd",
+                    area:"nagaram"
+                }
+            },
+            {
+                empId:3,
+                empName:"Hemanth",
+                empCompany:"Amazon",
+                empSal:423456,
+                empAddress:{
+                    empCity:"Sirisilla",
+                    area:"Gandhinagar"
+                }
+            },
+            {
+                empId:4,
+                empName:"Abhishek",
+                empCompany:"Flipkart",
+                empSal:623456,
+                empAddress:{
+                    empCity:"Guntur",
+                    area:"xyz"
+                }
+            }
+        ];
+        employees.map(user=>{
+            // console.log(user);
+            let store = document.getElementById("store");
+            store.innerHTML +=`
+            <tr>
+                <td>${user.empId}</td>
+                 <td>${user.empName}</td>
+                  <td>${user.empCompany}</td>
+                   <td>${user.empSal}</td>
+
+                    <td>${user.empAddress.empCity}</td>
+                     <td>${user.empAddress.area}</td>
+                </tr>
+            `
+        })
+    </script>
+</body>
+</html>

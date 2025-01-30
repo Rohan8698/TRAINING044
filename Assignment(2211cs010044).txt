@@ -61,3 +61,8 @@ Memory Allocation: Primitive types are stored in a stack, whereas non-primitive 
 Complexity: Primitive types are simpler and only hold a single value, while non-primitive types can store multiple values and have additional functionalities.
 Flexibility: Non-primitive types can be extended and customized, while primitive types are fixed.
 Understanding these data types is crucial for efficient coding and proper memory management in any programming language.
+
+
+
+=>>using java script take array of objects each object contains or emp id,emp name,emp company,emp salary and emp address,where emp address is again an object which contains emp city,emp area.
+   print all those values on the ui in the form of table
